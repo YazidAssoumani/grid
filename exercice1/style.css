@@ -1,0 +1,84 @@
+* {
+    box-sizing: border-box;
+    transition: all .2s ease 0s
+}
+
+*:hover {transition: all .2s ease 0s}
+
+body {
+    /* GRID */
+        display: grid;
+        grid-template-rows: 15% 70% 15%;
+    /* GRID */
+    margin: 0;
+    height: 100vh
+}
+
+main {
+    display: grid;
+    grid-template-rows: 27.5% 45% 27.5%
+}
+
+.blue, .pink, .light-pink {
+    /* FLEX */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    /* FLEX */
+    font-size: 4vh;
+    border: 1px solid black
+}
+
+.blue {background-color: #87ceeb}
+.pink {background-color: #ee82ee}
+.light-pink {background-color: #d8bfd8}
+
+@media (min-width: 768px)
+{
+    body {
+        grid-template-areas: 
+        "header header"
+        "main main"
+        "footer footer";
+        grid-template-columns: 1fr 1fr
+    }
+
+    main {
+        grid-area: main;
+        /* GRID */
+            grid-template-areas: 
+            "menuu contentt"
+            "ad ad";
+            grid-template-columns: 25% 75%;
+            grid-template-rows: 71.5% 28.5%
+        /* GRID */
+    }
+
+    header {grid-area: header}
+    #menu {grid-area: menuu}
+    #content {grid-area: contentt}
+    #ad {grid-area: ad}
+    footer {grid-area: footer}
+}
+
+@media (min-width: 992px)
+{
+    body {
+        grid-template-areas: 
+        "header header header"
+        "main main main"
+        "footer footer footer";
+        grid-template-rows: 20% 60% 20%;
+        grid-template-columns: 1fr 1fr 1fr
+    }
+
+    main {
+        grid-area: main;
+        /* GRID */
+            grid-template-areas: 
+            "menuu contentt ad";
+            grid-template-rows: 100%;
+            grid-template-columns: 25% 50% 25%
+        /* GRID */
+    }
+}
