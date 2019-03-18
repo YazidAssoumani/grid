@@ -1,0 +1,60 @@
+* {
+    box-sizing: border-box;
+    transition: all .2s ease 0s
+}
+
+*:hover {transition: all .2s ease 0s}
+
+body {
+    /* GRID */
+        display: grid;
+        grid-template-rows: 15vh 20vh 30vh 20vh 15vh;
+    /* GRID */
+    margin: 0
+}
+
+.azure, .turquoise, .pink, .light-pink {
+    /* FLEX */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    /* FLEX */
+    font-size: 4vh;
+    border: 1px solid black
+}
+
+.azure {background-color: #87CEEB}
+.turquoise {background-color: #40E0D0}
+.pink {background-color: #ee82ee}
+.light-pink {background-color: #d8bfd8}
+
+@media (min-width: 768px)
+{
+    body {
+        grid-template-areas: 
+        "menuu logo"
+        "menuu contentt"
+        "menuu ad"
+        "footer footer";
+        grid-template-columns: 25vw 75vw;
+        grid-template-rows: 15vh 50vh 20vh 15vh
+    }
+
+    header {grid-area: logo}
+    #menu {grid-area: menuu}
+    #content {grid-area: contentt}
+    #ad {grid-area: ad}
+    footer {grid-area: footer}
+}
+
+@media (min-width: 992px)
+{
+    body {
+        grid-template-areas: 
+        "menuu logo logo"
+        "menuu contentt ad"
+        "footer footer footer";
+        grid-template-columns: 25vw 50vw 25vw;
+        grid-template-rows: 20vh 60vh 20vh
+    }
+}
