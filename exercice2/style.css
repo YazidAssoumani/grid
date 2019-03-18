@@ -1,0 +1,41 @@
+* {
+    box-sizing: border-box;
+    transition: all .2s ease 0s
+}
+
+*:hover {transition: all .2s ease 0s}
+
+body {margin: 0}
+
+.red, .yellow, .green {
+    /* FLEX */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    /* FLEX */
+    font-size: 4vh;
+    border: 1px solid black
+}
+
+.red {
+    height: 15vh;
+    background-color: #CD5C5C
+}
+.yellow {
+    height: 20vh;
+    background-color: #FBFF40
+}
+.green {
+    height: 30vh;
+    background-color: #2E8B57
+}
+
+@media (min-width: 768px)
+{
+    #menu, .green {height: 50vh}
+}
+
+@media (min-width: 992px)
+{
+    #menu, .green, #ad {height: 60vh}
+}
